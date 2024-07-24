@@ -1010,6 +1010,10 @@ video {
   aspect-ratio: 16 / 9;
 }
 
+.aspect-\[1\.422\] {
+  aspect-ratio: 1.422;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1142,6 +1146,22 @@ video {
   height: 100%;
 }
 
+.h-\[18\%\] {
+  height: 18%;
+}
+
+.h-\[17\%\] {
+  height: 17%;
+}
+
+.h-\[16\%\] {
+  height: 16%;
+}
+
+.h-\[84\%\] {
+  height: 84%;
+}
+
 .min-h-\[250px\] {
   min-height: 250px;
 }
@@ -1227,6 +1247,18 @@ video {
   width: 100%;
 }
 
+.w-\[90\%\] {
+  width: 90%;
+}
+
+.w-\[0\%\] {
+  width: 0%;
+}
+
+.w-\[9\%\] {
+  width: 9%;
+}
+
 .max-w-\[1100px\] {
   max-width: 1100px;
 }
@@ -1277,6 +1309,42 @@ video {
 
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-\[330px\] {
+  max-width: 330px;
+}
+
+.max-w-\[320px\] {
+  max-width: 320px;
+}
+
+.max-w-\[310px\] {
+  max-width: 310px;
+}
+
+.max-w-\[312px\] {
+  max-width: 312px;
+}
+
+.max-w-\[313px\] {
+  max-width: 313px;
+}
+
+.max-w-\[314px\] {
+  max-width: 314px;
+}
+
+.max-w-\[315px\] {
+  max-width: 315px;
+}
+
+.max-w-\[316px\] {
+  max-width: 316px;
+}
+
+.max-w-\[317px\] {
+  max-width: 317px;
 }
 
 .flex-none {
@@ -3748,6 +3816,38 @@ video {
   color: rgb(217 119 6 / var(--tw-text-opacity));
 }
 
+@media (min-width: 409px) {
+  .min-\[409px\]\:text-\[17px\] {
+    font-size: 17px;
+  }
+
+  .min-\[409px\]\:text-\[17pxx\] {
+    color: 17pxx;
+  }
+}
+
+@media (min-width: 420px) {
+  .min-\[420px\]\:text-\[17px\] {
+    font-size: 17px;
+  }
+
+  .min-\[420px\]\:text-\[19px\] {
+    font-size: 19px;
+  }
+
+  .min-\[420px\]\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .min-\[420px\]\:text-\[17\.5px\] {
+    font-size: 17.5px;
+  }
+
+  .min-\[420px\]\:text-\[17\.9px\] {
+    font-size: 17.9px;
+  }
+}
+
 @media (min-width: 492px) {
   .min-\[492px\]\:border-b-\[0px\] {
     border-bottom-width: 0px;
@@ -3797,6 +3897,22 @@ video {
 
   .min-\[600px\]\:h-\[60px\] {
     height: 60px;
+  }
+
+  .min-\[600px\]\:h-\[300px\] {
+    height: 300px;
+  }
+
+  .min-\[600px\]\:h-\[250px\] {
+    height: 250px;
+  }
+
+  .min-\[600px\]\:h-\[230px\] {
+    height: 230px;
+  }
+
+  .min-\[600px\]\:h-\[240px\] {
+    height: 240px;
   }
 
   .min-\[600px\]\:min-h-\[350px\] {
@@ -3906,6 +4022,18 @@ video {
   .min-\[600px\]\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .min-\[600px\]\:text-\[32px\] {
+    font-size: 32px;
+  }
+
+  .min-\[600px\]\:text-\[34px\] {
+    font-size: 34px;
+  }
+
+  .min-\[600px\]\:text-\[35px\] {
+    font-size: 35px;
   }
 
   .min-\[600px\]\:decoration-\[2px\] {
