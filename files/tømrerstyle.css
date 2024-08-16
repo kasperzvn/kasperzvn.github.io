@@ -135,3 +135,31 @@ background-size: 40px 40px, 40px 40px, 20px 20px, 20px 20px;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 } */
+
+/* FADE IN TEXT */
+.fade-in {
+    animation: fadeIn 0.75s forwards;
+}
+
+.fade-in-text {
+    opacity: 0%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.paperbg {
+    background-color: rgba(230, 230, 247, 0);
+    opacity: 0.8;
+    background-image:  linear-gradient(rgba(245, 159, 10, 0.2) 2px, transparent 2px), linear-gradient(90deg, rgba(245, 159, 10, 0.2) 2px, transparent 2px), linear-gradient(rgba(245, 159, 10, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(245, 159, 10, 0.2) 1px, rgba(230, 230, 247, 0) 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}

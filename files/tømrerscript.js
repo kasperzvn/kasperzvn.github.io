@@ -14,6 +14,37 @@ const framesArray = Object.values(frames);
 
 let timestamp = performance.now()
 
+// FADE IN TEXT
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in')
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+const fadeElements = document.querySelectorAll('.fade-in-text');
+fadeElements.forEach(element => {
+    observer.observe(element);
+});
+
+// PARALLAX EFFECT 
+const parallax_imgs = document.querySelectorAll('.parallax_target');
+const parallax_strength = 1.5 * 100
+let parallax_ticking = false
+
+function updatePosition() {
+    parallax_imgs.forEach(function (img) {
+        const rect = img.getBoundingClientRect();
+        const scrollPercentage = (window.innerHeight - rect.top) / window.innerHeight;
+        const translateY = scrollPercentage * parallax_strength
+        
+        img.style.transform = `translateY(${translateY - parallax_strength}px)`;
+        parallax_ticking = false;
+    });
+}
+
 
 outofframediv.style.left = "309%"
 farleftdiv.style.left = "-206%"
