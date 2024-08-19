@@ -183,58 +183,58 @@ const rightbuttonfunction = function() {
 
 }
 
-const slidermenu = document.getElementById("slidermenu")
-const blackoverlay = document.getElementById("blackoverlay")
-const sliderparent = document.getElementById("sliderparent")
-const menubutton = document.getElementById("menubutton")
+// const slidermenu = document.getElementById("slidermenu")
+// const blackoverlay = document.getElementById("blackoverlay")
+// const sliderparent = document.getElementById("sliderparent")
+// const menubutton = document.getElementById("menubutton")
 
-const hamburger1 = document.getElementById("hamburger1")
-const hamburger2 = document.getElementById("hamburger2")
-const hamburger3 = document.getElementById("hamburger3")
+// const hamburger1 = document.getElementById("hamburger1")
+// const hamburger2 = document.getElementById("hamburger2")
+// const hamburger3 = document.getElementById("hamburger3")
 
-var menudeb = false
-var menuopen = false
+// var menudeb = false
+// var menuopen = false
 
-sliderparent.style.display = "none"
-blackoverlay.style.opacity = "0"
-slidermenu.style.right = "-100%"
+// sliderparent.style.display = "none"
+// blackoverlay.style.opacity = "0"
+// slidermenu.style.right = "-100%"
 
-menubutton.onclick = function() {
-    if (menudeb == true) {
-        return
-    }
-    menudeb = true
-    if (menuopen == false) {
-        sliderparent.style.display = "inline"
-        hamburger1.style.transform = "rotateZ(39.75deg)"
-        hamburger3.style.transform = "rotateZ(-39.75deg)"
-        hamburger2.style.opacity = "0"
+// menubutton.onclick = function() {
+//     if (menudeb == true) {
+//         return
+//     }
+//     menudeb = true
+//     if (menuopen == false) {
+//         sliderparent.style.display = "inline"
+//         hamburger1.style.transform = "rotateZ(39.75deg)"
+//         hamburger3.style.transform = "rotateZ(-39.75deg)"
+//         hamburger2.style.opacity = "0"
 
-        setTimeout(() => {
-            blackoverlay.style.opacity = "0.55"
-            slidermenu.style.right = "0%"
-        }, 10);
-        setTimeout(() => {
-            menuopen = true
-            menudeb = false
-        }, 250);
-    } else if (menuopen == true) {
-        console.log("closing")
-        hamburger1.style.transform = "rotateZ(0deg)"
-        hamburger3.style.transform = "rotateZ(0deg)"
-        hamburger2.style.opacity = "1"
+//         setTimeout(() => {
+//             blackoverlay.style.opacity = "0.55"
+//             slidermenu.style.right = "0%"
+//         }, 10);
+//         setTimeout(() => {
+//             menuopen = true
+//             menudeb = false
+//         }, 250);
+//     } else if (menuopen == true) {
+//         console.log("closing")
+//         hamburger1.style.transform = "rotateZ(0deg)"
+//         hamburger3.style.transform = "rotateZ(0deg)"
+//         hamburger2.style.opacity = "1"
 
-        setTimeout(() => {
-            blackoverlay.style.opacity = "0"
-            slidermenu.style.right = "-100%"
-        }, 10);
-        setTimeout(() => {
-            sliderparent.style.display = "none"
-            menuopen = false
-            menudeb = false
-        }, 250);
-    }
-}
+//         setTimeout(() => {
+//             blackoverlay.style.opacity = "0"
+//             slidermenu.style.right = "-100%"
+//         }, 10);
+//         setTimeout(() => {
+//             sliderparent.style.display = "none"
+//             menuopen = false
+//             menudeb = false
+//         }, 250);
+//     }
+// }
 
 const interval1 = setInterval(() => {
     // if (!(window.matchMedia("(min-width: 768px)").matches)) {
