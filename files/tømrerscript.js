@@ -9,6 +9,30 @@ var centerdiv = document.getElementsByClassName('centercard')[0]
 var rightdiv = document.getElementsByClassName('rightcard')[0]
 var farrightdiv = document.getElementsByClassName('farrightcard')[0]
 
+// PARALLAX EFFECT 
+const parallax_imgs = document.querySelectorAll('.parallax_target');
+const parallax_strength = 1.5 * 100
+let parallax_ticking = false
+
+function updatePosition() {
+    parallax_imgs.forEach(function (img) {
+        const rect = img.getBoundingClientRect();
+        const scrollPercentage = (window.innerHeight - rect.top) / window.innerHeight;
+        const translateY = scrollPercentage * parallax_strength
+        
+        img.style.transform = `translateY(${translateY - parallax_strength}px)`;
+        parallax_ticking = false;
+    });
+}
+
+window.addEventListener('scroll', function() {
+    if (!parallax_ticking) {
+        window.requestAnimationFrame(updatePosition);
+        parallax_ticking = true;
+    }
+})
+updatePosition()
+
 const frames = {outofframediv, farleftdiv, leftdiv, centerdiv, rightdiv, farrightdiv}
 const framesArray = Object.values(frames);
 
@@ -29,21 +53,18 @@ fadeElements.forEach(element => {
     observer.observe(element);
 });
 
-// PARALLAX EFFECT 
-const parallax_imgs = document.querySelectorAll('.parallax_target');
-const parallax_strength = 1.5 * 100
-let parallax_ticking = false
+// FADE IN SCROLL TEXT
+const fadescrollText = document.querySelectorAll('.fade-in-scroll');
+let hasScrolled = false;
 
-function updatePosition() {
-    parallax_imgs.forEach(function (img) {
-        const rect = img.getBoundingClientRect();
-        const scrollPercentage = (window.innerHeight - rect.top) / window.innerHeight;
-        const translateY = scrollPercentage * parallax_strength
-        
-        img.style.transform = `translateY(${translateY - parallax_strength}px)`;
-        parallax_ticking = false;
-    });
-}
+window.addEventListener('scroll', function() {
+  if (!hasScrolled) {
+    fadescrollText.forEach(function (element) {
+        element.classList.add('fade-in')
+    })
+    hasScrolled = true;
+  }
+}, { once: true });
 
 
 outofframediv.style.left = "309%"
