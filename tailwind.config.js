@@ -19,6 +19,9 @@ module.exports = {
         //CTLS
         gochi: ["Gochi Hand", ...defaultTheme.fontFamily.sans],
         gara: ["EB Garamond", ...defaultTheme.fontFamily.sans],
+
+        // PSYKOLOG
+        merri: ["Merriweather", ...defaultTheme.fontFamily.sans]
       }
     },
     // fontSize: {
